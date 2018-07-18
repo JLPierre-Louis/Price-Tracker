@@ -8,6 +8,7 @@ import argparse
 
 
 def init_parser():
+
     parser = argparse.ArgumentParser()
     parser.add_argument("-u", "--url",
                         dest="url",
@@ -31,15 +32,3 @@ if __name__ == '__main__':
     main()
 
 
-class Item(object):
-    def __init__(self, price, url, email, name="", brand="", priority=0,
-                 starred=False, group=None):
-        self._name = name
-        self._price = price
-        self._last_accessed = None   #future
-        self._priority = priority
-        self._starred = starred
-        self._group = group
-        self._url = url
-        self._email = email
-        self._brand = brand
